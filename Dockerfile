@@ -9,7 +9,8 @@ ADD . /app
 RUN npm run build
 COPY docker/entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
-RUN apk add && apk add postgresql-client
+RUN apt install postgresql-17-pgvector -y
+
 EXPOSE 3000
 
 ENV PORT 3000
