@@ -9,6 +9,7 @@ ADD . /app
 RUN npm run build
 COPY docker/entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
+RUN apk add && apk add postgresql-client
 EXPOSE 3000
 
 ENV PORT 3000
