@@ -9,7 +9,6 @@ ADD . /app
 RUN npm run build
 COPY docker/entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
-RUN apk update && apk add  postgresql-pgvector
 
 EXPOSE 3000
 
