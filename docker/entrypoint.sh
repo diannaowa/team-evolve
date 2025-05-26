@@ -13,6 +13,7 @@ OSS_BUCKET=${OSS_REGION}
 EOF
 
 psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -W ${POSTGRES_PASSWORD}  -h postgres -c "CREATE EXTENSION IF NOT EXISTS vector;"
+psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -W ${POSTGRES_PASSWORD}  -h postgres -f ./prisma/add-users.sql
 
 echo "start server..."
 npm run start
