@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cat >> .env<< EOF
 REDIS_URL=${REDIS_URL:-redis://127.0.0.1:6379}
 DATABASE_URL=${DATABASE_URL:-postgresql://postgres:123456@127.0.0.1:5432/ai}
