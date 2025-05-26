@@ -11,7 +11,7 @@ OSS_ACCESS_KEY_SECRET=${OSS_REGION}
 OSS_BUCKET=${OSS_REGION}
 EOF
 
-psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -h redis -c "CREATE EXTENSION vector;"
+psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -h postgres -c "CREATE EXTENSION vector;"
 
 echo "start server..."
 npm run start
