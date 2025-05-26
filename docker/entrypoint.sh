@@ -11,7 +11,7 @@ OSS_ACCESS_KEY_SECRET=${OSS_REGION}
 OSS_BUCKET=${OSS_REGION}
 EOF
 export PGPASSWORD=${POSTGRES_PASSWORD}
-psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -h postgres -c "CREATE EXTENSION vector;"
+psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} -h postgres -c "CREATE EXTENSION IF NOT EXISTS \"vector\";"
 
 echo "start server..."
 npm run start
