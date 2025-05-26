@@ -78,7 +78,8 @@ interface SystemRequirementState {
 }
 
 // Renamed from RequirementAnalysisState to better reflect its new role
-interface ActiveSystemContextState extends SystemRequirementState { // Inherits all fields from SystemRequirementState
+interface ActiveSystemContextState extends SystemRequirementState {
+  [x: string]: any
   currentSystemId: string | null
   isLoading: boolean
   error: string | null

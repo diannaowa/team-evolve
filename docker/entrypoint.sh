@@ -1,0 +1,15 @@
+#!/bin/bash
+cat >> .env<< EOF
+REDIS_URL=${REDIS_URL:-redis://127.0.0.1:6379}
+DATABASE_URL=${DATABASE_URL:-postgresql://postgres:123456@127.0.0.1:5432/ai}
+DIRECT_URL=${DATABASE_URL:-postgresql://postgres:123456@127.0.0.1:5432/ai}
+POSTGRES_URL_NON_POOLING=${POSTGRES_URL_NON_POOLING:-postgresql://postgres:123456@127.0.0.1:5432/ai}
+#OSS
+OSS_REGION=${OSS_REGION}
+OSS_ACCESS_KEY_ID=${OSS_REGION}
+OSS_ACCESS_KEY_SECRET=${OSS_REGION}
+OSS_BUCKET=${OSS_REGION}
+EOF
+
+echo "start server..."
+npm run start

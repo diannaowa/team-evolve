@@ -1,0 +1,8 @@
+.git/
+docker/
+.dockerignore
+Dockerfile
+*.swp
+**/__pycache__/
+**/node_modules/
+**/target/  # Rust/Cargo 编译目录
